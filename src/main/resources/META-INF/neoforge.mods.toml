@@ -1,0 +1,38 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+
+[[mods]]
+modId="hephaestus_bettercombat_compat"
+version="1.0.0"
+displayName="Hephaestus Better Combat Compat"
+authors="compatibility addon"
+description='''Compatibility helper for Hephaestus equipment and New Better Combat on NeoForge 26.1.2.''' 
+
+[[dependencies.hephaestus_bettercombat_compat]]
+modId="neoforge"
+type="required"
+versionRange="[26.1.2,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.hephaestus_bettercombat_compat]]
+modId="minecraft"
+type="required"
+versionRange="[26.1.2,26.2)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.hephaestus_bettercombat_compat]]
+modId="hephaestus"
+type="optional"
+versionRange="[1.0.0,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.hephaestus_bettercombat_compat]]
+modId="hephaestus_tools"
+type="optional"
+versionRange="[1.0.0,)"
+ordering="AFTER"
+side="BOTH"

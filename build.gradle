@@ -1,0 +1,30 @@
+plugins {
+    id 'net.neoforged.moddev' version '2.0.141'
+}
+
+group = mod_group_id
+version = mod_version
+
+base { archivesName = mod_id }
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
+
+neoForge {
+    enable {
+        version = neo_version
+        disableRecompilation = true
+    }
+
+    runs {
+        client { client() }
+        server { server(); programArgument '--nogui' }
+    }
+
+    mods {
+        "${mod_id}" { sourceSet(sourceSets.main) }
+    }
+}
+
+repositories { }
+
+dependencies { }
