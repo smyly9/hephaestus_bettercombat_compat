@@ -1,12 +1,19 @@
-# Hephaestus × Better Combat compatibility (NeoForge 26.1.2)
+# Hephaestus × Better Combat Compatibility
 
-Targets **Better Combat by Daedelus**.
+Resource-only compatibility mod providing Better Combat (by Daedalus) weapon attributes for the assembled tools in Hephaestus Tools.
 
-## Included support
+## Release 1.0.0
 
-This is a resource-only NeoForge compatibility mod. It bundles Better Combat weapon-attribute JSON for all 13 assembled Hephaestus Tools weapons, using their IDs confirmed from the Hephaestus Tools 26.1 source. The files are under `data/hephaestus_tools/weapon_attributes/`.
+- Minecraft: Java Edition **26.1.2**
+- NeoForge: **26.1.2** (project is configured for `26.1.2.120`)
+- Better Combat by Daedelus: tested with **3.2.2+26.1.2**, NeoForge
+- Hephaestus Tools: **26.1.2**, NeoForge (tested with the author's in-game setup)
 
-| Item ID | Preset |
+Install the jar on both client and server with those mods. Hephaestus Tools itself requires Hephaestus Forge. This mod contains no third-party code/assets; its data files point at Better Combat's built-in weapon presets.
+
+## Included mappings
+
+| Hephaestus Tools item | Better Combat preset |
 |---|---|
 | `hephaestus_tools:pickaxe` | `bettercombat:pickaxe` |
 | `hephaestus_tools:sledge_hammer` | `bettercombat:hammer` |
@@ -22,15 +29,14 @@ This is a resource-only NeoForge compatibility mod. It bundles Better Combat wea
 | `hephaestus_tools:sword` | `bettercombat:sword` |
 | `hephaestus_tools:cleaver` | `bettercombat:claymore` |
 
-The presets are reasonable starting points based on item form, not upstream-authored balancing.
+## Build from source
 
-## Install
+Requirements: Java 25 and Gradle 9.1+. Run `gradle build`; output is in `build/libs/`. The project disables Minecraft source recompilation because the mod is resource-only, reducing build setup and memory usage.
 
-Install `hephaestus_bettercombat_compat-1.0.0.jar` in the `mods` folder **on both client and server**, alongside NeoForge 26.1.2, Better Combat, Hephaestus Forge, and Hephaestus Tools. Launch and test the 13 tools.
+## License and attribution
 
-## References
+The compatibility project's original files are licensed under MIT (see `LICENSE`). Hephaestus Tools and Better Combat are separate projects; use their respective licenses and download their mods from their official project pages.
 
-- Better Combat: https://www.curseforge.com/minecraft/mc-mods/better-combat-by-daedelus/
-- Better Combat JSON integration guide/source: https://github.com/ZsoltMolnarrr/BetterCombat
-- Hephaestus Tools source and item registrations: https://github.com/JDKDigital/hephaestustools/tree/26.1/main
+- Better Combat by Daedalus: https://www.curseforge.com/minecraft/mc-mods/better-combat-by-daedelus
+- Hephaestus Tools: https://www.curseforge.com/minecraft/mc-mods/hephaestus-tools
 - Hephaestus Forge: https://www.curseforge.com/minecraft/mc-mods/hephaestus-forge

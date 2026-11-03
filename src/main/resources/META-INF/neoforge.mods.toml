@@ -5,9 +5,9 @@ license="MIT"
 [[mods]]
 modId="hephaestus_bettercombat_compat"
 version="1.0.0"
-displayName="Hephaestus Better Combat Compat"
-authors="compatibility addon"
-description='''Compatibility helper for Hephaestus equipment and New Better Combat on NeoForge 26.1.2.''' 
+displayName="Hephaestus Better Combat Compatibility"
+authors="Hephaestus Better Combat Compatibility contributors"
+description='''Better Combat weapon attributes for Hephaestus Tools on NeoForge 26.1.2.''' 
 
 [[dependencies.hephaestus_bettercombat_compat]]
 modId="neoforge"
@@ -24,15 +24,15 @@ ordering="NONE"
 side="BOTH"
 
 [[dependencies.hephaestus_bettercombat_compat]]
-modId="hephaestus"
-type="optional"
-versionRange="[1.0.0,)"
+modId="bettercombat"
+type="required"
+versionRange="[3.2.2,)"
 ordering="AFTER"
 side="BOTH"
 
 [[dependencies.hephaestus_bettercombat_compat]]
 modId="hephaestus_tools"
-type="optional"
+type="required"
 versionRange="[1.0.0,)"
 ordering="AFTER"
 side="BOTH"
