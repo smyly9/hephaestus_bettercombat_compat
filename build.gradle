@@ -2,16 +2,21 @@ plugins {
     id 'net.neoforged.moddev' version '2.0.141'
 }
 
-group = mod_group_id
-version = mod_version
+group = project.property('group')
+version = project.property('VERSION')
 
-base { archivesName = mod_id }
+base {
+    archivesName = project.property('MODID')
+}
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(25)
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(25)
+}
 
 neoForge {
     enable {
-        version = neo_version
+        version = neoforge_version
+        // Resource-only mod: skip Minecraft source decompilation/recompilation.
         disableRecompilation = true
     }
 
@@ -21,10 +26,26 @@ neoForge {
     }
 
     mods {
-        "${mod_id}" { sourceSet(sourceSets.main) }
+        "${project.property('MODID')}" {
+            sourceSet(sourceSets.main)
+        }
     }
 }
 
-repositories { }
-
-dependencies { }
+processResources {
+    def metadata = [
+        MODID: project.property('MODID'),
+        VERSION: project.property('VERSION'),
+        NAME: project.property('NAME'),
+        AUTHOR: project.property('AUTHOR'),
+        DESCRIPTION: project.property('DESCRIPTION'),
+        GIT_REPO: project.property('GIT_REPO'),
+        NEO_FORGE_LOADER: project.property('NEO_FORGE_LOADER'),
+        NEOFORGE_VERSION_RANGE: project.property('NEOFORGE_VERSION_RANGE'),
+        MINECRAFT: project.property('MINECRAFT'),
+        ITEM_ICON: project.property('ITEM_ICON')
+    ]
+    filesMatching('META-INF/neoforge.mods.toml') {
+        expand(metadata)
+    }
+}
