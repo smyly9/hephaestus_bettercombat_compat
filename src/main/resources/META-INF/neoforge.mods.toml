@@ -9,6 +9,7 @@ version = "${VERSION}"
 displayName = "${NAME}"
 authors = "${AUTHOR}"
 iconFile = "icon.png"
+logoFile = "icon.png"
 description = '''${DESCRIPTION}'''
 itemIcon = "${ITEM_ICON}"
 

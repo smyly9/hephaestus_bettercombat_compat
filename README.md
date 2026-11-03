@@ -1,4 +1,4 @@
-![Hephaestus x Better Combat Compat](/src/main/resources/icon.png)
+![Hephaestus x Better Combat Compat](/icon.png)
 # Hephaestus x Better Combat Compatibility
 
 A resource-only NeoForge mod adding Better Combat weapon attributes for Hephaestus Tools. 
